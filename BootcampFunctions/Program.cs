@@ -1,3 +1,3 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using BootcampFunctions;
-Console.WriteLine(IsFromBellville.FromBellville("CY 123"));
+Console.WriteLine(typeof(string) == "Hello".GetType());

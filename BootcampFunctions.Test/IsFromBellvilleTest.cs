@@ -8,4 +8,10 @@ public class IsFromBellvilleTest
     {
         Assert.Equal(true, IsFromBellville.FromBellville("CY"));
     }
+
+    [Fact]
+    public void ShouldReturnFalse()
+    {
+        Assert.Equal(false, IsFromBellville.FromBellville("CA"));
+    }
 }

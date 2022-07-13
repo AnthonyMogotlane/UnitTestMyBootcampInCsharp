@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 namespace BootcampFunctionsTest;
 
 public class FindItemsOverTest
@@ -16,7 +17,7 @@ public class FindItemsOverTest
         itemOverThreshold.Add(new Item() {Name = "grapefruit", Qty = 45});
         itemOverThreshold.Add(new Item() {Name = "apples", Qty = 75});
         // Then
-        Assert.Equal(itemOverThreshold, FindItemsOver.ItemsOver(items, 40));
+        Assert.Equal(JsonConvert.SerializeObject(itemOverThreshold), JsonConvert.SerializeObject(FindItemsOver.ItemsOver(items, 40)));
     }
 
     [Fact]

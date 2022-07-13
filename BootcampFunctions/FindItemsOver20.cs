@@ -1,17 +1,13 @@
 namespace BootcampFunctions;
-
 public class FindItemsOver20
 {
-    class Item 
+    public static List<Item> ItemsOver20(List<Item> listOfItems)
     {
-        public string 
-    }
-    
-    public static object[] ItemsOver20(object[] itemList)
-    {
-        foreach (var item in itemList)
+        List<Item> itemsOver20 = new List<Item>();
+        foreach (Item item in listOfItems)
         {
-            System.Console.WriteLine(item);
+            if(item.Qty > 20) itemsOver20.Add(item);
         }
+        return itemsOver20;
     }
 }

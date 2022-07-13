@@ -1,9 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using BootcampFunctions;
-object[] itemList = {
-    {name : 'apples', qty : 10},
-    {name : 'pears', qty : 37},
-    {name : 'bananas', qty : 27},
-    {name : 'apples', qty : 3},
+
+Item item1 = new Item(){Name = "Banana", Qty = 20};
+Item item2 = new Item(){Name = "Apple",Qty = 60};
+Item item3 = new Item(){Name = "Grape",Qty = 50};
+
+List<Item> listOfItems = new List<Item>();
+listOfItems.Add(item1);
+listOfItems.Add(item2);
+listOfItems.Add(item3);
+
+foreach (var item in FindItemsOver20.ItemsOver20(listOfItems))
+{
+    Console.WriteLine(item.Name);
 }
-Console.WriteLine(CountAllPaarl.AllPaarl("CJ 345 123, CJ 2345, CL 123-546, CK 345, CJ 123"));

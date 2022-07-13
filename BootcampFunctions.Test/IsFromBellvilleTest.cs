@@ -6,12 +6,12 @@ public class IsFromBellvilleTest
     [Fact]
     public void ShouldReturnTrue()
     {
-        Assert.Equal(true, IsFromBellville.FromBellville("CY"));
+        Assert.True(IsFromBellville.FromBellville("CY"));
     }
 
     [Fact]
     public void ShouldReturnFalse()
     {
-        Assert.Equal(false, IsFromBellville.FromBellville("CA"));
+        Assert.False(IsFromBellville.FromBellville("CA"));
     }
 }

@@ -5,11 +5,11 @@ public class IsWeekdayTest
     [Fact]
     public void ShouldReturnTrueForTheDayOfTheWeek()
     {
-        Assert.Equal(true, IsWeekday.Weekday("Monday"));
+        Assert.True(IsWeekday.Weekday("Monday"));
     }
     [Fact]
     public void ShouldReturnFalseForTheDayWhichIsAWeekend()
     {
-        Assert.Equal(false, IsWeekday.Weekday("Sunday"));
+        Assert.False(IsWeekday.Weekday("Sunday"));
     }
 }

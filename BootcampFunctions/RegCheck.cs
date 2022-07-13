@@ -1,3 +1,4 @@
+
 namespace BootcampFunctions;
 public class RegCheck
 {

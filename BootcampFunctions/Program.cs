@@ -1,16 +1,24 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using BootcampFunctions;
 
-Item item1 = new Item(){Name = "Banana", Qty = 20};
-Item item2 = new Item(){Name = "Apple",Qty = 60};
-Item item3 = new Item(){Name = "Grape",Qty = 50};
-
-List<Item> listOfItems = new List<Item>();
-listOfItems.Add(item1);
-listOfItems.Add(item2);
-listOfItems.Add(item3);
-
-foreach (var item in FindItemsOver20.ItemsOver20(listOfItems))
+List<Product> products = new List<Product>()
 {
-    Console.WriteLine(item.Name);
-}
+    new Product() {Department = "hardware", Sales = 7800, Day = "Monday"},
+    new Product() {Department = "outdoor", Sales = 1500, Day = "Monday"},
+    new Product() {Department = "carpentry", Sales = 5500, Day = "Monday"},
+    new Product() {Department = "hardware", Sales = 7500, Day = "Tuesday"},
+    new Product() {Department = "outdoor", Sales = 2505, Day = "Tuesday"},
+    new Product() {Department = "carpentry", Sales = 1540, Day = "Tuesday"},
+    new Product() {Department = "hardware", Sales = 2500, Day = "Wednesday"},
+    new Product() {Department = "outdoor", Sales = 8507, Day = "Wednesday"},
+    new Product() {Department = "carpentry", Sales = 8009, Day = "Wednesday"},
+    new Product() {Department = "hardware", Sales = 20000, Day = "Thursday"},
+    new Product() {Department = "outdoor", Sales = 18007, Day = "Thursday"},
+    new Product() {Department = "carpentry", Sales = 6109, Day = "Thursday"},
+    new Product() {Department = "hardware", Sales = 20005, Day = "Friday"},
+    new Product() {Department = "outdoor", Sales = 12006, Day = "Friday"},
+    new Product() {Department = "carpentry", Sales = 16109, Day = "Friday"}
+};
+
+
+Console.WriteLine(MostProfitableDepartment.ProfitableDepartment(products));
